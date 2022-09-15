@@ -41,6 +41,11 @@ class Documents {
 	get() {
 		return this._entries;
 	}
+
+	update(callback) {
+		this._entries = callback(this._entries);
+		this._notify();
+	}
 }
 
 export class PluginProvider {

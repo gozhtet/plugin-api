@@ -8,6 +8,7 @@ interface Documents {
 	remove(document: Document | string): void;
 	removeAll(): void;
 	get(): Array<Document>;
+	update(callback: (state: Array<Document>) => Array<Document>): void;
 }
 
 interface Sidebar {
