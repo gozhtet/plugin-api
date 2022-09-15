@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const process = require('process');
-const { exec, execSync } = require('child_process');
 
 const createPlugin = ({ name }) => {
 	const cwd = process.cwd();
@@ -14,7 +13,6 @@ const createPlugin = ({ name }) => {
 	const targetPath = path.join(cwd, name);
 	fs.mkdirSync(targetPath);
 	createStructure(dir, targetPath, { name, version: packageJson.version });
-	runShell('git init');
 };
 
 const readDir = (dirPath) => {
@@ -31,10 +29,6 @@ const readDir = (dirPath) => {
 			children: isDirectory ? readDir(currentPath) : [],
 		};
 	});
-};
-
-const runShell = (command) => {
-	execSync(command);
 };
 
 const stripExtension = (name) => name.split('.').slice(0, -1).join('.');
