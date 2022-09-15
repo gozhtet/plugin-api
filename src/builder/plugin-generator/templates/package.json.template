@@ -7,7 +7,7 @@
 	"gozhtet": {
 		"name": "%{name}",
 		"description": "%{name} description",
-		"plugin": "build/test-plugin-api.js",
+		"plugin": "build/%{name}.js",
 		"theme": {
 			"colors": "colors.json",
 			"css": "build/custom-theme.css"
