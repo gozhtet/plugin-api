@@ -1,0 +1,19 @@
+{
+  "name": "%{name} theme",
+  "colors": {
+    "primary": "rgba(0, 196, 255, 1)",
+    "border": "rgba(255,255,255,.12)",
+    "panel": "rgba(45, 45, 45, 0.9)",
+    "overlay": "rgba(244, 244, 244, 0.12)",
+    "background": "black",
+    "text": "rgba(255,255,255,0.7)",
+    "title": "#fff",
+    "subtitle": "rgba(255,255,255,0.5)",
+    "red": "rgba(255, 85, 85, 1)"
+  },
+  "vars": {
+    "borderRadius": 6,
+    "shadow": "0 3px 6px rgba(0, 0, 0, 0.12)",
+    "transition": "0.2s"
+  }
+}

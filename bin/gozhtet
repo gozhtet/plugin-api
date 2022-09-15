@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+let mode = process.argv[2];
+let modeArg = process.argv[3];
+
+if (mode === 'dev') {
+	require('../src/builder').dev();
+} else if (mode === 'build') {
+	require('../src/builder').build();
+} else if (mode === '--version') {
+	process.stdout.write('gozhtet ' + require('../package.json').version + '\n');
+} else if (mode === 'new') {
+	require('../src/builder/plugin-generator/cli').createPlugin({
+		name: modeArg,
+	});
+}
