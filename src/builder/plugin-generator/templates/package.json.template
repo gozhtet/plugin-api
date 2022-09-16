@@ -10,7 +10,7 @@
 		"plugin": "build/%{name}.js",
 		"theme": {
 			"colors": "colors.json",
-			"css": "build/custom-theme.css"
+			"css": "build/style.css"
 		}
 	},
 	"scripts": {

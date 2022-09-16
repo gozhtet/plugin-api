@@ -19,8 +19,8 @@ interface Sidebar {
 export class PluginProvider {
 	documents: Documents;
 	sidebar?: Sidebar;
-	onInit?: () => void;
-	onUpdateDocument?: (document: Document) => void;
+	onInit?(): void;
+	onUpdateDocument?(document: Document): void;
 }
 
 export interface Document {
