@@ -10,6 +10,7 @@ class Documents {
 
 	subscribe(cb) {
 		this._listeners.push(cb);
+		cb(this._entries);
 
 		return () => {
 			this._listeners = this._listeners.filter((_cb) => _cb !== cb);
