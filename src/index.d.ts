@@ -13,8 +13,6 @@ interface Documents {
 
 interface Sidebar {
 	label: string | Record<string, string>;
-	removableDocuments?: boolean;
-	onAddNewDocument?: () => void;
 }
 
 export class PluginProvider {
@@ -22,6 +20,8 @@ export class PluginProvider {
 	sidebar?: Sidebar;
 	onInit?(): void;
 	onUpdateDocument?(document: Document): void;
+	onAddNewDocument?(): void;
+	removeDocument?(document: Document): void;
 }
 
 export interface Document {
