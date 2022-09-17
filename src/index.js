@@ -18,7 +18,7 @@ class Documents {
 	}
 
 	remove(document) {
-		this.entries = entries.filter(
+		this._entries = this._entries.filter(
 			(doc) => doc.id !== document || doc !== document
 		);
 		this._notify();
@@ -30,7 +30,7 @@ class Documents {
 	}
 
 	add(document) {
-		this.entries.push(document);
+		this._entries.push(document);
 		this._notify();
 	}
 
