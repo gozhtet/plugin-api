@@ -18,9 +18,7 @@ class Documents {
 	}
 
 	remove(document) {
-		this._entries = this._entries.filter(
-			(doc) => doc.id !== document || doc !== document
-		);
+		this._entries = this._entries.filter((doc) => doc !== document);
 		this._notify();
 	}
 

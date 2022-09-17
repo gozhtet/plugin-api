@@ -5,7 +5,7 @@ interface Documents {
 	subscribe(cb: (documents: Array<Document>) => void): () => void;
 	add(document: Document): void;
 	addAll(documents: Array<Document>): void;
-	remove(document: Document | string): void;
+	remove(document: Document): void;
 	removeAll(): void;
 	get(): Array<Document>;
 	update(callback: (state: Array<Document>) => Array<Document>): void;
