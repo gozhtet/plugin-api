@@ -13,6 +13,7 @@ interface Documents {
 
 interface Sidebar {
 	label: string | Record<string, string>;
+	removableDocuments?: boolean;
 	onAddNewDocument?: () => void;
 }
 
