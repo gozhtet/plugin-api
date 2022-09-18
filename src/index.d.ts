@@ -20,14 +20,18 @@ export class PluginProvider {
 	sidebar?: Sidebar;
 	onInit?(): void;
 	onUpdateDocument?(document: Document): void;
-	onAddNewDocument?(): void;
+	onAddNewDocument?(document?: Document): void;
+	changeDocumentPosition?(document: Document) {}
 	removeDocument?(document: Document): void;
+	onAddGroup?(): void;
 }
 
 export interface Document {
 	id: string;
 	name: string;
 	content?: string;
+	position?: number;
+	parentId?: string;
 	children?: Document[];
 }
 

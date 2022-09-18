@@ -50,5 +50,19 @@ class Documents {
 export class PluginProvider {
 	documents = new Documents();
 
-	constructor() {}
+	constructor() {
+		const methods = [
+			'onInit',
+			'onUpdateDocument',
+			'onAddNewDocument',
+			'changeDocumentPosition',
+			'removeDocument',
+			'onAddGroup',
+		];
+		methods.forEach((methodName) => {
+			if (this[methodName] && typeof this[methodName] === 'function') {
+				this[methodName] = this[methodName].bind(this);
+			}
+		});
+	}
 }
