@@ -21,7 +21,7 @@ export class PluginProvider {
 	onInit?(): void;
 	onUpdateDocument?(document: Document): void;
 	onAddNewDocument?(document?: Document): void;
-	changeDocumentPosition?(document: Document) {}
+	changeDocumentPosition?(document: Document): void;
 	removeDocument?(document: Document): void;
 	onAddGroup?(): void;
 }
