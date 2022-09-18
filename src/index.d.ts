@@ -31,6 +31,7 @@ export interface Document {
 	name: string;
 	content?: string;
 	position?: number;
+	type?: 'document' | 'folder';
 	parentId?: string;
 	children?: Document[];
 }
