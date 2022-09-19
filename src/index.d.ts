@@ -24,6 +24,8 @@ export class PluginProvider {
 	changeDocumentPosition?(document: Document): void;
 	removeDocument?(document: Document): void;
 	onAddGroup?(): void;
+	onRenameDocument?(document: Document): void;
+	onRenameFolder?(document: Document): void;
 }
 
 export interface Document {
